@@ -704,8 +704,8 @@ steps:
       potentialCases:
         id: potentialCases
         source: axillary-peripheral-vascular-disease---primary/output
-  peripheral-vascular-disease-raynaud---primary:
-    run: peripheral-vascular-disease-raynaud---primary.cwl
+  peripheral-vascular-disease-history---primary:
+    run: peripheral-vascular-disease-history---primary.cwl
     out:
     - output
     in:
@@ -715,6 +715,17 @@ steps:
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-peron---primary/output
+  peripheral-vascular-disease-raynaud---primary:
+    run: peripheral-vascular-disease-raynaud---primary.cwl
+    out:
+    - output
+    in:
+      inputModule:
+        id: inputModule
+        source: inputModule66
+      potentialCases:
+        id: potentialCases
+        source: peripheral-vascular-disease-history---primary/output
   common-peripheral-vascular-disease---primary:
     run: common-peripheral-vascular-disease---primary.cwl
     out:
@@ -722,7 +733,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule66
+        source: inputModule67
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-raynaud---primary/output
@@ -733,7 +744,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule67
+        source: inputModule68
       potentialCases:
         id: potentialCases
         source: common-peripheral-vascular-disease---primary/output
@@ -744,7 +755,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule68
+        source: inputModule69
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-ulnar---primary/output
@@ -755,7 +766,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule69
+        source: inputModule70
       potentialCases:
         id: potentialCases
         source: arteriovenous-peripheral-vascular-disease---primary/output
@@ -766,7 +777,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule70
+        source: inputModule71
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-coeliac---primary/output
@@ -777,7 +788,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule71
+        source: inputModule72
       potentialCases:
         id: potentialCases
         source: radial-peripheral-vascular-disease---primary/output
@@ -788,7 +799,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule72
+        source: inputModule73
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-stripping---primary/output
@@ -799,7 +810,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule73
+        source: inputModule74
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-excision---primary/output
@@ -810,7 +821,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule74
+        source: inputModule75
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-obliteration---primary/output
@@ -821,7 +832,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule75
+        source: inputModule76
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-repair---primary/output
@@ -832,7 +843,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule76
+        source: inputModule77
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-replace---primary/output
@@ -843,7 +854,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule77
+        source: inputModule78
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-ulcer---primary/output
@@ -854,7 +865,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule78
+        source: inputModule79
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-operation---primary/output
@@ -865,7 +876,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule79
+        source: inputModule80
       potentialCases:
         id: potentialCases
         source: diabetic-peripheral-vascular-disease---primary/output
@@ -876,7 +887,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule80
+        source: inputModule81
       potentialCases:
         id: potentialCases
         source: popliteal-peripheral-vascular-disease---primary/output
@@ -887,7 +898,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule81
+        source: inputModule82
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-system---primary/output
@@ -898,7 +909,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule82
+        source: inputModule83
       potentialCases:
         id: potentialCases
         source: coronary-peripheral-vascular-disease---primary/output
@@ -909,7 +920,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule83
+        source: inputModule84
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-injection---primary/output
@@ -920,7 +931,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule84
+        source: inputModule85
       potentialCases:
         id: potentialCases
         source: vertebral-peripheral-vascular-disease---primary/output
@@ -931,7 +942,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule85
+        source: inputModule86
       potentialCases:
         id: potentialCases
         source: splenic-peripheral-vascular-disease---primary/output
@@ -942,7 +953,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule86
+        source: inputModule87
       potentialCases:
         id: potentialCases
         source: aneurysmal-peripheral-vascular-disease---primary/output
@@ -953,7 +964,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule87
+        source: inputModule88
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-prosth---primary/output
@@ -964,7 +975,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule88
+        source: inputModule89
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-posterior---primary/output
@@ -975,7 +986,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule89
+        source: inputModule90
       potentialCases:
         id: potentialCases
         source: peripheral-vascular-disease-aneurysm---primary/output
@@ -986,7 +997,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule90
+        source: inputModule91
       potentialCases:
         id: potentialCases
         source: percutaneous-peripheral-vascular-disease---primary/output
@@ -1354,6 +1365,10 @@ inputs:
     type: File
   inputModule90:
     id: inputModule90
+    doc: Python implementation unit
+    type: File
+  inputModule91:
+    id: inputModule91
     doc: Python implementation unit
     type: File
 outputs:

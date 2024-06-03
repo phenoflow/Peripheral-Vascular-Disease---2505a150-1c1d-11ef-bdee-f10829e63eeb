@@ -2,11 +2,11 @@
 
 import sys, csv, re
 
-codes = [{"code":"P72z000","system":"readv2"},{"code":"791B500","system":"readv2"}];
+codes = [{"code":"ZV12900","system":"readv2"},{"code":"ZV12800","system":"readv2"},{"code":"ZV12811","system":"readv2"}];
 REQUIRED_CODES = 1;
 with open(sys.argv[1], 'r') as file_in, open('peripheral-vascular-disease-potential-cases.csv', 'w', newline='') as file_out:
     csv_reader = csv.DictReader(file_in)
-    csv_writer = csv.DictWriter(file_out, csv_reader.fieldnames + ["peripheral-vascular-disease-valsalva---primary-identified"])
+    csv_writer = csv.DictWriter(file_out, csv_reader.fieldnames + ["peripheral-vascular-disease-history---primary-identified"])
     csv_writer.writeheader();
     codes_identified = 0;
     for row in csv_reader:
@@ -16,10 +16,10 @@ with open(sys.argv[1], 'r') as file_in, open('peripheral-vascular-disease-potent
             for item in re.findall(r'\(([^,]*)\,', row[cell]):
                 if(item in list(map(lambda code: code['code'], codes))): codes_identified+=1;
                 if(codes_identified>=REQUIRED_CODES):
-                    newRow["peripheral-vascular-disease-valsalva---primary-identified"] = "CASE";
+                    newRow["peripheral-vascular-disease-history---primary-identified"] = "CASE";
                     break;
             if(codes_identified>=REQUIRED_CODES): break;
         if(codes_identified<REQUIRED_CODES):
-            newRow["peripheral-vascular-disease-valsalva---primary-identified"] = "UNK";
+            newRow["peripheral-vascular-disease-history---primary-identified"] = "UNK";
         codes_identified=0;
         csv_writer.writerow(newRow)
